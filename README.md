@@ -11,3 +11,24 @@ La caracterización cuantitativa de la lesión es un insumo clínico directo: el
  
 **Dataset.** ATLAS R2.0 — *Anatomical Tracings of Lesions After Stroke* (NITRC, ~955 sujetos, ~9.7 GB de NIfTI). Liew et al. (2022), *Sci Data* 9:320. T1w preprocesado en MNI-152 + máscaras manuales de lesión, deidentificado, bajo Data Use Agreement. Cohorte multi-sitio con sesgo geográfico hacia EE.UU./Europa/Asia (sin sitios latinoamericanos).
 
+## Cómo obtener el dataset
+
+1. Crear cuenta en NITRC (https://www.nitrc.org/account/register.php).
+2. Solicitar acceso al proyecto ATLAS y aceptar el Data Use Agreement.
+3. Descargar el archivo `ATLAS_2.zip` (~9.7 GB).
+4. Descomprimir en una carpeta local. Anotar la ruta absoluta.
+5. Editar la variable `DATA_ROOT` en `01_eda_univariado.ipynb` con esa ruta.
+
+## Estructura del repositorio
+
+```
+.
+├── README.md                        # este archivo
+├── 01_eda_univariado.ipynb          # EDA univariado de target y predictores clave (Fase 2 · día 1)
+├── requirements.txt                 # entorno reproducible (pendiente)
+├── data/                            # NO versionado — solo referencia local
+└── outputs/
+    ├── figures/                     # gráficos generados por el EDA
+    └── tables/                      # tablas resumen (CSV)
+```
+
