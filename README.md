@@ -24,7 +24,7 @@ La caracterización cuantitativa de la lesión es un insumo clínico directo: el
 ```
 .
 ├── README.md                        # este archivo
-├── 01_eda_univariado.ipynb          # EDA univariado de target y predictores clave (Fase 2 · día 1)
+├── 01_eda_univariado.ipynb          # EDA univariado de target y predictores clave 
 ├── requirements.txt                 # entorno reproducible (pendiente)
 ├── data/                            # NO versionado — solo referencia local
 └── outputs/
