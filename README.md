@@ -1,4 +1,4 @@
-# Proyecto-Analisis---ACV
+# Proyecto-Análisis---ACV
 
 **Curso:** BE3006 · Análisis de Datos Biomédicos · UVG · Ciclo 1, 2026
 **Equipo:** Oscar Antonio Ramírez Duarte (23062) · Paulina María Martínez Flores (23143) · Fátima Angie Nicolle Camposeco Hernández (23122)
