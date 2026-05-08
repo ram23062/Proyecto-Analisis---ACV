@@ -1,19 +1,16 @@
 services:
   jupyter:
-    image: quay.io/jupyter/scipy-notebook:python-3.11
-    container_name: atlas-jupyter
+    image: jupyter/scipy-notebook:latest
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      PYTHONPATH: /home/jovyan/work
     ports:
       - "8888:8888"
-    environment:
-      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-uvg}
-      DATA_ROOT: /data/ATLAS_2
     volumes:
-      # Codigo del proyecto montado en /home/jovyan/work
       - ./:/home/jovyan/work
-      # Dataset ATLAS montado read-only desde la maquina local
-      # Ajusta la ruta DATA_ROOT_HOST en tu archivo .env
-      - ${DATA_ROOT_HOST}:/data/ATLAS_2:ro
     working_dir: /home/jovyan/work
     command: >
-      bash -c "pip install -q --no-cache-dir -r requirements.txt &&
-               start-notebook.py --ServerApp.token='${JUPYTER_TOKEN:-uvg}' --ServerApp.root_dir=/home/jovyan/work"
+      bash -lc "
+      pip install --no-cache-dir -r /home/jovyan/work/requirements.txt &&
+      start-notebook.py --NotebookApp.token='' --NotebookApp.password=''
+      "
